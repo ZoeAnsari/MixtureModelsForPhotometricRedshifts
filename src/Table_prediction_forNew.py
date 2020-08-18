@@ -55,7 +55,7 @@ def MDN_result_forNew(mus, sigs, pis,MDN_path, path, data_z_tot,weight_con_prior
         data_train = data_z_tot[['g', 'Err_g', 'r', 'Err_r', 'i',
                                  'Err_i', 'z', 'Err_z', 'extinction_i', 'w1', 'w1_sig',
                                  'w2', 'w2_sig', 'psfMag_g', 'psfMag_r',
-                                 'psfMag_i', 'psfMag_z']]#, "index"]]
+                                 'psfMag_i', 'psfMag_z', "ra", "dec", "objid", "phz","phzErr"]]#, "index"]]
 
 
         data_train["g-r"] = (data_train['g'] - data_train['r'])
@@ -129,19 +129,18 @@ def MDN_result_forNew(mus, sigs, pis,MDN_path, path, data_z_tot,weight_con_prior
         # data_merged = pd.merge(df_uncertanity, df_max_, on="index")
         df_max_=df_max_.rename(columns={"mus": "PhotoZ"})
         df_max_["index"]=df_max_['index']#df_uncertanity["index"]
-        print(df_max_.columns)
         data_merged=df_max_
         # data_merged = data_merged.set_index('index')
 
 
-        print(data_merged.columns)
+
 
 
         df_peak_prediction=data_merged[['g', 'Err_g', 'r', 'Err_r', 'i',
                                  'Err_i', 'z', 'Err_z', 'extinction_i', 'w1', 'w1_sig',
                                  'w2', 'w2_sig', 'psfMag_g', 'psfMag_r',
                                  'psfMag_i', 'psfMag_z', "index",'g-r', 'r-i',
-                        'i-z', 'z-w1', 'w1-w2',"max_pis", "sigs", "PhotoZ"]]
+                        'i-z', 'z-w1', 'w1-w2',"max_pis", "sigs", "PhotoZ", "ra", "dec", "objid", "phz","phzErr"]]
 
 
         n_=10
@@ -223,7 +222,9 @@ def MDN_result_forNew(mus, sigs, pis,MDN_path, path, data_z_tot,weight_con_prior
         df_peak_prediction["Mean_PhotoZ"]=df_uncertanity_mean["PhotoZ"]
         df_peak_prediction["Mean_delta"]=df_uncertanity_mean["deltaZ"]
 
-        df_peak_prediction=df_peak_prediction[["ra", "dec","max_pis", "sigs", "PhotoZ","Mean_PhotoZ" , "Mean_delta"]]
+        df_peak_prediction=df_peak_prediction[["objid","ra", "dec","phz","phzErr","PhotoZ","max_pis", "sigs","Mean_PhotoZ" , "Mean_delta"]]
+
+        df_peak_prediction=df_peak_prediction.rename({"phz": "SDSS_photoz", "phzErr" : "SDSS_photoz_err"}, axis='columns')
         df_peak_prediction.to_csv(str(data_predict_predict_path) + "photo_z.csv")
 
 
