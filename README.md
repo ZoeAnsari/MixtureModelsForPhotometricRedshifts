@@ -2,9 +2,12 @@
 
 ## Dependencies
 
-Keras 
+Keras
+
 [scikit-learn](https://scikit-learn.org/stable/)
+
 [MDN](https://github.com/ZoeAnsari/keras-mdn-layer)
+
 
 ## Usage
 
@@ -17,5 +20,6 @@ One will be able to estimate its probabilistic redshift by changing the data_pre
 2.To re-train the method with more robust spectroscopic and deeper photometric samples changed the corresponding “path”s in __init__.py.
 
 
+## Acknowledgement
 
 I acknowledge Adriano Agnello and Christa Gall for the patient guidance and encouragement they have provided thought out the whole process. It would be impossible to implement this method without their supervision. 
