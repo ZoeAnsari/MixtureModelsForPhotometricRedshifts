@@ -24,3 +24,7 @@ One will be able to estimate its probabilistic redshift by changing the data_pre
 ## Acknowledgement
 
 I acknowledge Adriano Agnello and Christa Gall for the patient guidance and encouragement they have provided thought out the whole process. It would be impossible to implement this method without their supervision. 
+
+## Reference
+
+[Mixture Models for Photometric Redshifts](https://ui.adsabs.harvard.edu/abs/2020arXiv201007319A/abstract)
