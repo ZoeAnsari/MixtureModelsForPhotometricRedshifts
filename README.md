@@ -1,12 +1,12 @@
 # MixtureModelsForPhotometricRedshifts
 
-##Dependencies
+## Dependencies
 
 Keras 
 [scikit-learn](https://scikit-learn.org/stable/)
 [MDN](https://github.com/ZoeAnsari/keras-mdn-layer)
 
-##Usage
+## Usage
 
 1.By a given set of photometric features for a source as follows:
 'g', 'Err_g', 'r', 'Err_r', 'i',  'Err_i', 'z', 'Err_z', 'extinction_i', 'w1', 'w1_sig','w2', 'w2_sig', 'psfMag_g', 'psfMag_r', 'psfMag_i', 'psfMag_z'
