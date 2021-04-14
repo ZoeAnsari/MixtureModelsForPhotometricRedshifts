@@ -2,29 +2,19 @@
 
 ## Dependencies
 
-Keras
-
-[scikit-learn](https://scikit-learn.org/stable/)
-
-[MDN](https://github.com/ZoeAnsari/keras-mdn-layer)
+[lmfit](https://lmfit.github.io/lmfit-py/): pip install lmfit
 
 
 ## Usage
 
-1.By a given set of photometric features for a source as follows:
+1.By a given spectra of a core collapse supernnova and a set of initial values on parameters including supernova temperature and radius, and dust temperature and dust mass a modified black body function will be fitted and the values for the best fit will be estimated.
 
-'g', 'Err_g', 'r', 'Err_r', 'i',  'Err_i', 'z', 'Err_z', 'extinction_i', 'w1', 'w1_sig','w2', 'w2_sig', 'psfMag_g', 'psfMag_r', 'psfMag_i', 'psfMag_z'
-
-One will be able to estimate its probabilistic redshift by changing the data_predict_read_path and data_predict_predict_path in __init__.py to the corresponnding table’s path.
-
-
-2.To re-train the method with more robust spectroscopic and deeper photometric samples changed the corresponding “path”s in __init__.py.
 
 
 ## Acknowledgement
 
-I acknowledge Adriano Agnello and Christa Gall for the patient guidance and encouragement they have provided thought out the whole process. It would be impossible to implement this method without their supervision. 
+I acknowledge the support and discussions with Christa Gall.
 
 ## Reference
 
-[Mixture Models for Photometric Redshifts](https://ui.adsabs.harvard.edu/abs/2020arXiv201007319A/abstract)
+
