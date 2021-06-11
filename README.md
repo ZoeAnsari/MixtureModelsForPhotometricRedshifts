@@ -27,7 +27,7 @@ I acknowledge Adriano Agnello and Christa Gall for the patient guidance and enco
 
 ## Reference
 
-[Mixture Models for Photometric Redshifts](https://ui.adsabs.harvard.edu/abs/2020arXiv201007319A/abstract)
+[Mixture models for photometric redshifts](https://www.aanda.org/component/article?access=doi&doi=10.1051/0004-6361/202039675)
 
 ## Citation
 
